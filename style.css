@@ -1,0 +1,150 @@
+/* #region Additional Styles */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.site-title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 15vw;
+    margin-left: -2vw;
+    margin-top: -5vw;
+}
+
+button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    background-color: transparent;
+    font-size: 1rem;
+    font-family: inherit;
+
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+
+    margin: 1rem;
+    padding: 1rem;
+
+    border-radius: 5px;
+    border: 1px solid transparent;
+}
+
+nav li {
+    display: inline-block;
+    list-style-type: none;
+}
+
+nav li:last-child {
+    float: right;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 1rem;
+}
+
+main {
+    float: left;
+    padding: 1rem;
+    width: 69.999%;
+}
+
+article {
+    box-shadow: 0 3px 10px #0001;
+    margin: 1rem;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid #0002;
+}
+
+article header {
+    padding: 1rem;
+    background-color: #0001;
+}
+
+article p {
+    padding: 2rem;
+    font-family: serif;
+    text-indent: 1rem;
+}
+
+article footer {
+    text-align: right;
+    padding: 0.5rem;
+}
+
+aside {
+    float: left;
+    width: 29.99%;
+    padding: 1rem;
+}
+
+aside ul {
+    list-style: none;
+    padding-left: 1rem;
+}
+
+aside li {
+    padding: 0.5rem;
+}
+
+body > footer {
+    clear: both;
+    padding: 5rem 1rem;
+    background-color: #000a;
+    color: #fff;
+}
+
+/* #endregion */
+
+html {
+    /* CSS variables need to start with two dashes */
+    --text-color: #333;
+    --bg: #eee;
+    --card-bg: #fafafa;
+    --theme-color: #f37;
+    --theme-color-light: #feccdd;
+    --theme-color-dark: hsl(340, 100%, 50%);
+}
+
+html.dark {
+    --text-color: #eee;
+    --bg: #333;
+    --card-bg: #212121;
+    --theme-color: #f37;
+    --theme-color-light: #f37a;
+    --theme-color-dark: hsl(340, 100%, 50%);
+}
+
+body {
+    /* use the var() function to get the variable's value */
+    color: var(--text-color);
+    background-color: var(--bg);
+}
+
+article {
+    background: var(--card-bg);
+}
+
+a {
+    color: var(--theme-color);
+}
+
+button {
+    background-color: var(--theme-color);
+    color: #fffd;
+    border-color: var(--theme-color-dark);
+    box-shadow: 0 3px 5px var(--theme-color-light);
+}
